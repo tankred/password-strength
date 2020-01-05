@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2020-01-05
+### Changed
+- passwordstrength SLOG version
+
 ## [Released]
 
-## [0.1.0] - YYYY-MM-DD
+## [0.1.1] - 2019-12-29
 ### Added
 - This CHANGELOG file 
 - A README file

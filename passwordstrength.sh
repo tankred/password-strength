@@ -10,9 +10,19 @@ IFS=$'\n\t'
 
 # The IFS variable - which stands for Internal Field Separator - controls what Bash calls word splitting.
 
+print_something () {
+  echo Hello $1
+}
 
-#Want to know if your password is easily crackable? MD5 it and google the result. osx: md5 -s "string"
-echo "#CLI progam:"
+wait_enter () {
+  read -p "Press enter to continue"
+}
+
+print_something SLOG
+echo "Want to know if your password is easily crackable?"
+wait_enter
+echo "MD5 it and google the result. osx: md5 -s 'string'"
+wait_enter
 #10 md5 -s mypassword
 #20 ggle the result using elinks
 #30 count results
