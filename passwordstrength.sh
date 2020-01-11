@@ -2,14 +2,6 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-# set -e immediately halts the script when unhandled error appears.
-# set -u affects variables. When set, a reference to any variable you haven't previously defined - with the exceptions of $* and $@ - is an error, and causes the program to immediately exit. 
-
-# set -o pipefail
-# This setting prevents errors in a pipeline from being masked.
-
-# The IFS variable - which stands for Internal Field Separator - controls what Bash calls word splitting.
-
 print_something () {
   echo Hello $1
 }
@@ -21,10 +13,15 @@ wait_enter () {
 print_something SLOG
 echo "Want to know if your password is easily crackable?"
 wait_enter
-echo "MD5 it and google the result. osx: md5 -s 'string'"
+echo "MD5 it and google the result."
+#  osx: md5 -s 'string'
+echo "echo -n ""string"" | md5sum"
 wait_enter
+echo "sample"
+echo -n "password123" | md5sum
 #10 md5 -s mypassword
-#20 ggle the result using elinks
+echo "#20 ggle the result using elinks"
+echo "https://md5.gromweb.com/?md5=482c811da5d5b4bc6d497ffa98491e38"
 #30 count results
 #40 if no results > goto 60
 #55 else goto 10
